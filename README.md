@@ -1,16 +1,21 @@
 # *Number Classification API*
 
 ## *Overview*
-This API takes a number as a query parameter and returns its mathematical properties along with a fun fact.
+This is a simple API that classifies numbers based on their mathematical properties. It determines whether a number is prime, perfect, or an Armstrong number, calculates the sum of its digits, and fetches a fun fact about the number from the Numbers API.
 
-## *Features*
-- Determines if a number is *prime, perfect, or an Armstrong number*.
-- Identifies whether the number is *odd or even*.
-- Calculates the *sum of its digits*.
-- Fetches a *fun fact* from the [Numbers API](http://numbersapi.com/).
+
+## Features
+- Checks if a number is *prime*
+- Checks if a number is *perfect*
+- Checks if a number is an *Armstrong number*
+- Determines if a number is *odd or even*
+- Calculates the *sum of the digits*
+- Fetches a *fun fact* from the Numbers API
+
 
 ## *API Endpoint*
-### **GET /api/classify-number?number=<integer>**
+### *GET /api/classify-number?number={number}*
+
 #### *Example Request:*
 sh
 https://hng12-number-classification-api.vercel.app/api/classify-number?number=371
@@ -31,27 +36,35 @@ json
 #### *Error Response (400 Bad Request)*
 json
 {
-    "number": "abc",
+    "number": "alphabet",
     "error": true
 }
 
 
+
 ---
 
-## *Setup & Installation*
+## Installation & Running Locally
 ### *1. Clone the repository*
 sh
 git clone https://github.com/yadekola/hng-number-classification-api.git
 
-cd hng-number-classification-api
+### **2. Navigate into the project directory:**
+   sh
+   cd hng-number-classification-api
+   
 
-
-### *2. Install dependencies*
+### *3. Install dependencies*
 sh
 npm install
 
+### **4. Create a .env file and set up the port:**
+   sh
+   PORT=3000
 
-### *3. Run the server locally*
+
+
+### *5. Run the server locally*
 sh
 node index.js
 npm start
@@ -61,6 +74,10 @@ sh
 npx nodemon index.js
 
 The server will run at http://localhost:3000.
+
+### **6. Test the API locally:**
+
+http://localhost:3000/api/classify-number?number=371
 
 ---
 
