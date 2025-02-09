@@ -42,6 +42,7 @@ json
 ### *1. Clone the repository*
 sh
 git clone https://github.com/yadekola/hng-number-classification-api.git
+
 cd hng-number-classification-api
 
 
